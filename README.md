@@ -57,6 +57,32 @@
 
 ---
 
+### Azure
+
+- **Connect-AzAccount:** Authenticates to Azure
+- **Set-AzContext:** Switches active subscription 
+- **Get-AzResourceGroup:** Pulls all resource groups in the current subscription
+- **New-AzResourceGroup:** Provisions an rg in target region
+- **Get-AzResource:** audits all resources across a subscription
+- **Remove-AzResource:** Deletes resource by ID
+- **Get-AzVM:** Pulls VM inventory and config
+- **Start-AzVM:** Starts a stopped VM
+- **Stop-AzVM:** Shuts down a running VM
+- **New-AzVM:** Provisions a VM from a config object
+- **Get-AzVirtualNetwork:** Lists VNets and their address spaces
+- **Get-AzNetworkSecurityGroup:** Audits NSG rules on a VNet or subnet
+- **Get-AzPublicIpAddress:** pulls public IP assignments across a subscription
+- **Get-AzStorageAccount:** Lists storage accounts
+- **New-AzStorageAccount:** Provisions a storage account in a target resource group
+- **Get-AzRoleAssignment:** Audits RBAC assignments at any scope
+- **New-AzRoleAssignment:** Assigns a role to a user or service principal
+- **Get-AzRoleDefinition:** lists available built-in and custom roles
+- **Get-AzPolicyAssignment:** Checks what policies are applied at subscription or resource group scope
+- **Get-AzPolicyDefinition:** Lists available policy definitions
+- **dsregcmd:** Checks Azure AD join and hybrid join state on a device, good for diagnosing Intune enrollment failures
+
+---
+
 ### Bitlocker
 
 - **Get-Tpm:** Validates TPM state before attempting encryption
