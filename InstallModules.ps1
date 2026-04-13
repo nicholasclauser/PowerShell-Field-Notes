@@ -9,7 +9,8 @@ $modules = @(
     'PnP.PowerShell',
     'ImportExcel',
     'Az',
-    'Microsoft.Graph'
+    'Microsoft.Graph',
+    'SqlServer'
 )
 
 Write-Host "Installing modules..."
