@@ -1,0 +1,19 @@
+# minimal github actions -> Azure app Service deploy template. To arm: move to .github/workflows/, set app name, and add the
+# AZURE_PUBLISH_PROFILE secret (app service>download publish profile).
+
+name: deploy
+
+on:
+  push:
+    branches: [main]        # trigger: any push to main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # the temporary runner VM
+    steps:
+      - uses: actions/checkout@v4              # step 1: pull your code onto the runner
+
+      - uses: azure/webapps-deploy@v3          # step 2: push it to App Service
+        with:
+          app-name: my-app                     # your App Service app's name
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
